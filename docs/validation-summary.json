@@ -106,5 +106,28 @@
     "actualChromeExportMovementBoundsReset": true,
     "errors": [],
     "externalRequests": []
+  },
+  "publicRelease": {
+    "status": "PUBLIC RELEASED",
+    "repository": "https://github.com/77hs/3d-room-builder-skill",
+    "release": "https://github.com/77hs/3d-room-builder-skill/releases/tag/v0.1.1",
+    "tag": "v0.1.1",
+    "commit": "ee8b304538a1f53f6c62ad073b1ad8c6408761f5",
+    "anonymousRepositoryAndRelease": true,
+    "anonymousBothArchivesDownloaded": true,
+    "sha256Verified": true,
+    "filesPerArchive": 60,
+    "sourceFilesPerArchive": 59,
+    "freshPublicCloneNode22ProductionInstall": true,
+    "freshPublicCloneTests": {
+      "passed": 20,
+      "failed": 0
+    },
+    "publicCloneActualCodexExplicitSkillEditAndExport": true,
+    "publicCloneInstalledSourceHashesUnchanged": true,
+    "migratedExportActualChromeMovement": true,
+    "tagCI": "https://github.com/77hs/3d-room-builder-skill/actions/runs/39601939550",
+    "tagCINode22And24": "PASS",
+    "benefitApplicationSubmitted": false
   }
 }
