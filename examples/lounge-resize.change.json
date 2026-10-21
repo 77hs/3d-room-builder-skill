@@ -1,0 +1,20 @@
+{
+  "expectedRevision": 1,
+  "operations": [
+    {
+      "op": "setRoom",
+      "patch": {
+        "width": 5.2
+      }
+    },
+    {
+      "op": "updateFurniture",
+      "id": "window-desk",
+      "patch": {
+        "rotation": 270,
+        "x": 4.3,
+        "z": 3.45
+      }
+    }
+  ]
+}

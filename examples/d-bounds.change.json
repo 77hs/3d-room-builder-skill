@@ -1,0 +1,12 @@
+{
+  "expectedRevision": 2,
+  "operations": [
+    {
+      "op": "updateFurniture",
+      "id": "desk-b",
+      "patch": {
+        "x": 4.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "expectedRevision": 1,
+  "operations": [
+    {
+      "op": "setRoom",
+      "patch": {
+        "width": 4.2,
+        "depth": 5.8
+      }
+    },
+    {
+      "op": "updateFurniture",
+      "id": "desk-a",
+      "patch": {
+        "x": 1,
+        "z": 2.8,
+        "rotation": 90
+      }
+    },
+    {
+      "op": "updateFurniture",
+      "id": "bookcase",
+      "patch": {
+        "z": 5
+      }
+    },
+    {
+      "op": "removeFurniture",
+      "id": "chair-b"
+    },
+    {
+      "op": "addFurniture",
+      "value": {
+        "id": "cabinet",
+        "kind": "wardrobe",
+        "x": 3.65,
+        "z": 4.65,
+        "width": 0.8,
+        "depth": 0.6,
+        "height": 1.5
+      }
+    },
+    {
+      "op": "setMaterial",
+      "id": "fabric",
+      "value": {
+        "color": "#8b747e"
+      }
+    },
+    {
+      "op": "setLights",
+      "patch": {
+        "ambient": {
+          "intensity": 1.6
+        }
+      }
+    }
+  ]
+}

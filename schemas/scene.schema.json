@@ -1,0 +1,387 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:3d-room-builder:scene:1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "revision",
+    "name",
+    "units",
+    "room",
+    "openings",
+    "furniture",
+    "materials",
+    "lights",
+    "spawn",
+    "player"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "units": {
+      "const": "m"
+    },
+    "room": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "depth",
+        "height",
+        "wallThickness"
+      ],
+      "properties": {
+        "width": {
+          "type": "number",
+          "minimum": 2,
+          "maximum": 20
+        },
+        "depth": {
+          "type": "number",
+          "minimum": 2,
+          "maximum": 20
+        },
+        "height": {
+          "type": "number",
+          "minimum": 2.1,
+          "maximum": 5
+        },
+        "wallThickness": {
+          "type": "number",
+          "minimum": 0.06,
+          "maximum": 0.4
+        }
+      }
+    },
+    "openings": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "wall",
+          "offset",
+          "width",
+          "height",
+          "sill"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/id"
+          },
+          "type": {
+            "enum": [
+              "door",
+              "window"
+            ]
+          },
+          "wall": {
+            "enum": [
+              "north",
+              "south",
+              "east",
+              "west"
+            ]
+          },
+          "offset": {
+            "type": "number",
+            "minimum": 0
+          },
+          "width": {
+            "type": "number",
+            "minimum": 0.5,
+            "maximum": 5
+          },
+          "height": {
+            "type": "number",
+            "minimum": 0.4,
+            "maximum": 4
+          },
+          "sill": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 4
+          }
+        }
+      }
+    },
+    "furniture": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "x",
+          "z",
+          "width",
+          "depth",
+          "height",
+          "rotation",
+          "material"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/id"
+          },
+          "kind": {
+            "enum": [
+              "bed",
+              "desk",
+              "chair",
+              "wardrobe",
+              "bookshelf",
+              "sofa",
+              "table"
+            ]
+          },
+          "x": {
+            "type": "number"
+          },
+          "z": {
+            "type": "number"
+          },
+          "width": {
+            "type": "number",
+            "minimum": 0.35,
+            "maximum": 6
+          },
+          "depth": {
+            "type": "number",
+            "minimum": 0.35,
+            "maximum": 6
+          },
+          "height": {
+            "type": "number",
+            "minimum": 0.4,
+            "maximum": 4
+          },
+          "rotation": {
+            "enum": [
+              0,
+              90,
+              180,
+              270
+            ]
+          },
+          "material": {
+            "$ref": "#/definitions/id"
+          }
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 32,
+      "propertyNames": {
+        "$ref": "#/definitions/id"
+      },
+      "required": [
+        "wall",
+        "floor",
+        "ceiling",
+        "wood",
+        "fabric",
+        "metal",
+        "glass"
+      ],
+      "additionalProperties": {
+        "$ref": "#/definitions/material"
+      },
+      "properties": {
+        "wall": {
+          "$ref": "#/definitions/material"
+        },
+        "floor": {
+          "$ref": "#/definitions/material"
+        },
+        "ceiling": {
+          "$ref": "#/definitions/material"
+        },
+        "wood": {
+          "$ref": "#/definitions/material"
+        },
+        "fabric": {
+          "$ref": "#/definitions/material"
+        },
+        "metal": {
+          "$ref": "#/definitions/material"
+        },
+        "glass": {
+          "$ref": "#/definitions/material"
+        }
+      }
+    },
+    "lights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ambient",
+        "sun",
+        "points"
+      ],
+      "properties": {
+        "ambient": {
+          "$ref": "#/definitions/light"
+        },
+        "sun": {
+          "$ref": "#/definitions/light"
+        },
+        "points": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "x",
+              "y",
+              "z",
+              "color",
+              "intensity"
+            ],
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              },
+              "color": {
+                "$ref": "#/definitions/color"
+              },
+              "intensity": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "spawn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "z",
+        "yaw"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "yaw": {
+          "type": "number",
+          "minimum": -360,
+          "maximum": 360
+        }
+      }
+    },
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "radius",
+        "eyeHeight",
+        "speed"
+      ],
+      "properties": {
+        "radius": {
+          "type": "number",
+          "minimum": 0.15,
+          "maximum": 0.4
+        },
+        "eyeHeight": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 4
+        }
+      }
+    }
+  },
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,47}$"
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "light": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "color",
+        "intensity"
+      ],
+      "properties": {
+        "color": {
+          "$ref": "#/definitions/color"
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        }
+      }
+    },
+    "material": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "color",
+        "roughness"
+      ],
+      "properties": {
+        "color": {
+          "$ref": "#/definitions/color"
+        },
+        "roughness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "metalness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}

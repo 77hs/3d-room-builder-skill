@@ -1,0 +1,92 @@
+{
+  "name": "Two-person study",
+  "room": {
+    "width": 3.6,
+    "depth": 6.2
+  },
+  "spawn": {
+    "x": 1.1,
+    "z": 1.05,
+    "yaw": 0
+  },
+  "openings": [
+    {
+      "id": "entry",
+      "type": "door",
+      "wall": "west",
+      "offset": 0.6,
+      "width": 0.9,
+      "height": 2.15
+    },
+    {
+      "id": "north-window",
+      "type": "window",
+      "wall": "north",
+      "offset": 0.9,
+      "width": 1.4,
+      "height": 1.2,
+      "sill": 1.1
+    },
+    {
+      "id": "east-window",
+      "type": "window",
+      "wall": "east",
+      "offset": 4.1,
+      "width": 1.2,
+      "height": 1.2,
+      "sill": 1.1
+    }
+  ],
+  "furniture": [
+    {
+      "id": "desk-a",
+      "kind": "desk",
+      "x": 0.65,
+      "z": 3,
+      "width": 1.2,
+      "depth": 0.65,
+      "height": 0.75
+    },
+    {
+      "id": "desk-b",
+      "kind": "desk",
+      "x": 2.9,
+      "z": 3,
+      "width": 1.2,
+      "depth": 0.65,
+      "height": 0.75
+    },
+    {
+      "id": "chair-a",
+      "kind": "chair",
+      "x": 0.65,
+      "z": 3.9,
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.9,
+      "material": "fabric",
+      "rotation": 180
+    },
+    {
+      "id": "chair-b",
+      "kind": "chair",
+      "x": 2.9,
+      "z": 3.9,
+      "width": 0.5,
+      "depth": 0.5,
+      "height": 0.9,
+      "material": "fabric",
+      "rotation": 180
+    },
+    {
+      "id": "bookcase",
+      "kind": "bookshelf",
+      "x": 0.3,
+      "z": 5.3,
+      "width": 1.4,
+      "depth": 0.4,
+      "height": 1.9,
+      "rotation": 90
+    }
+  ]
+}

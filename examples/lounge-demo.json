@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "name": "阅读与办公休闲室",
+  "units": "m",
+  "room": {
+    "height": 2.8,
+    "wallThickness": 0.12,
+    "width": 5.2,
+    "depth": 4.4
+  },
+  "openings": [
+    {
+      "sill": 0,
+      "id": "south-entry",
+      "type": "door",
+      "wall": "south",
+      "offset": 2.3,
+      "width": 1.05,
+      "height": 2.15
+    },
+    {
+      "sill": 1.05,
+      "id": "north-study-window",
+      "type": "window",
+      "wall": "north",
+      "offset": 2.75,
+      "width": 1.7,
+      "height": 1.3
+    },
+    {
+      "sill": 1.05,
+      "id": "east-daylight-window",
+      "type": "window",
+      "wall": "east",
+      "offset": 2.25,
+      "width": 1.6,
+      "height": 1.3
+    }
+  ],
+  "furniture": [
+    {
+      "rotation": 90,
+      "material": "wood",
+      "id": "two-seat-sofa",
+      "kind": "sofa",
+      "x": 0.58,
+      "z": 2.5,
+      "width": 2,
+      "depth": 0.9,
+      "height": 0.85
+    },
+    {
+      "rotation": 270,
+      "material": "wood",
+      "id": "window-desk",
+      "kind": "desk",
+      "x": 4.3,
+      "z": 3.45,
+      "width": 1.8,
+      "depth": 0.65,
+      "height": 0.76
+    },
+    {
+      "rotation": 0,
+      "material": "fabric",
+      "id": "desk-chair",
+      "kind": "chair",
+      "x": 3.65,
+      "z": 3.08,
+      "width": 0.58,
+      "depth": 0.58,
+      "height": 0.9
+    },
+    {
+      "rotation": 270,
+      "material": "wood",
+      "id": "reading-bookshelf",
+      "kind": "bookshelf",
+      "x": 4.52,
+      "z": 1.2,
+      "width": 1.2,
+      "depth": 0.35,
+      "height": 1.95
+    },
+    {
+      "rotation": 0,
+      "material": "wood",
+      "id": "small-side-table",
+      "kind": "table",
+      "x": 0.65,
+      "z": 1,
+      "width": 0.8,
+      "depth": 0.5,
+      "height": 0.7
+    }
+  ],
+  "materials": {
+    "wall": {
+      "color": "#dde5d9",
+      "roughness": 0.9
+    },
+    "floor": {
+      "color": "#c69d70",
+      "roughness": 0.72
+    },
+    "ceiling": {
+      "color": "#f5f3ee",
+      "roughness": 0.9
+    },
+    "wood": {
+      "color": "#b68c60",
+      "roughness": 0.65
+    },
+    "fabric": {
+      "color": "#a8a39a",
+      "roughness": 0.96
+    },
+    "metal": {
+      "color": "#484b4b",
+      "roughness": 0.5,
+      "metalness": 0.45
+    },
+    "glass": {
+      "color": "#c6e0e7",
+      "roughness": 0.12
+    }
+  },
+  "lights": {
+    "ambient": {
+      "color": "#fff7eb",
+      "intensity": 1.4
+    },
+    "sun": {
+      "color": "#fff2dc",
+      "intensity": 2
+    },
+    "points": [
+      {
+        "id": "room-fill",
+        "x": 2.45,
+        "y": 2.55,
+        "z": 2.15,
+        "color": "#fff0d9",
+        "intensity": 9
+      },
+      {
+        "id": "desk-fill",
+        "x": 3.65,
+        "y": 2.35,
+        "z": 3.7,
+        "color": "#fff5e5",
+        "intensity": 5
+      }
+    ]
+  },
+  "spawn": {
+    "x": 2.825,
+    "z": 0.65,
+    "yaw": 0
+  },
+  "player": {
+    "radius": 0.22,
+    "eyeHeight": 1.6,
+    "speed": 2.1
+  },
+  "revision": 3
+}

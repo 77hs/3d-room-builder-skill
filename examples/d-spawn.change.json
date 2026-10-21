@@ -1,0 +1,12 @@
+{
+  "expectedRevision": 2,
+  "operations": [
+    {
+      "op": "setSpawn",
+      "patch": {
+        "x": 0,
+        "z": 0
+      }
+    }
+  ]
+}

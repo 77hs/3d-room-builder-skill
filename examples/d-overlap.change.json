@@ -1,0 +1,17 @@
+{
+  "expectedRevision": 2,
+  "operations": [
+    {
+      "op": "addFurniture",
+      "value": {
+        "id": "overlapping-table",
+        "kind": "table",
+        "x": 2.9,
+        "z": 3,
+        "width": 0.8,
+        "depth": 0.8,
+        "height": 0.75
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Room Builder</title><link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/controls/OrbitControls.js":"./vendor/OrbitControls.js"}}</script>
+</head>
+<body>
+  <aside>
+    <a class="brand" href="./"><span class="brand-symbol">⌑</span> ROOM BUILDER <small>01 / STUDIO</small></a>
+    <div class="eyebrow">A SPACE OF YOUR OWN</div>
+    <h1 id="name">Preparing your room</h1>
+    <p class="intro">Explore the room. Take a different perspective.</p>
+    <div class="measure"><div><strong id="area">—</strong><span>FLOOR AREA / m²</span></div><div><strong id="height">—</strong><span>CEILING / m</span></div></div>
+    <div class="section-label">THE PLAN <span id="dimensions"></span></div>
+    <svg id="map" aria-label="Room floor plan"></svg>
+    <div class="section-label">IN THIS ROOM <span id="count"></span></div>
+    <ul id="furniture"></ul>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span id="status">Preparing scene…</span><small id="revision"></small></div>
+  </aside>
+  <main>
+    <header><div><span class="eyebrow">SPATIAL STUDY</span><p>Built around your ideas.</p></div><span class="local-badge">● LOCAL PREVIEW</span></header>
+    <nav aria-label="View mode"><button id="overview" class="active" aria-pressed="true">↗ Overview</button><button id="walk" aria-pressed="false">◉ First person</button><button id="reset" aria-label="Reset position">↺ Reset</button></nav>
+    <div id="viewport"><canvas id="scene" tabindex="0" aria-label="Interactive 3D room"></canvas><div id="crosshair" hidden>+</div><div id="error" role="alert" hidden></div></div>
+    <div class="scene-caption"><span id="mode-label">01 / OVERVIEW</span><strong id="location">Your room, in perspective.</strong></div>
+    <footer><span id="hint">Drag to orbit · Scroll to zoom</span><span>METRES · HUMAN SCALE</span></footer>
+  </main>
+  <script type="module" src="./main.mjs"></script>
+</body>
+</html>

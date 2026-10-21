@@ -1,0 +1,84 @@
+{
+  "version": "0.1.1",
+  "date": "2026-10-21",
+  "p3": "PASS / CLOSED by owner",
+  "p4": {
+    "result": "PASS",
+    "checks": [
+      "Fresh natural-language room: actual dimensions, furniture count, WebGL, walking, desk collision, floor limit and reset",
+      "Explicit follow-up: resized and rotated desk; structural diff preserves all other properties",
+      "Implicit second follow-up: add/remove furniture, material/light change; unrelated data exactly preserved",
+      "Real rejected overlap: scene and all immutable build hashes, active browser URL and revision unchanged",
+      "Actual installed Skill loaded implicitly, explicit and repeated implicit use confirmed; conceptual negative made zero tool calls",
+      "Export moved to unrelated directory, entire Skill/user workspace hidden: generic static server still renders and walks"
+    ],
+    "revisions": [
+      1,
+      2,
+      3
+    ],
+    "browser": "Actual Chrome, headless SwiftShader; not a hardware GPU benchmark",
+    "installation": "Fresh archive extraction plus production-only npm ci in path with spaces",
+    "skillUnmodified": true,
+    "privateProjectRequired": false,
+    "developerPathRequired": false,
+    "errors": [],
+    "externalRequests": [],
+    "at": "2026-10-21T11:29:04.947Z"
+  },
+  "hostCases": [
+    {
+      "case": "create",
+      "hostExitCode": 0,
+      "realCLIExecuted": true,
+      "toolCalls": 16
+    },
+    {
+      "case": "edit-one",
+      "hostExitCode": 0,
+      "realCLIExecuted": true,
+      "toolCalls": 15
+    },
+    {
+      "case": "edit-two",
+      "hostExitCode": 0,
+      "realCLIExecuted": true,
+      "toolCalls": 12
+    },
+    {
+      "case": "invalid",
+      "hostExitCode": 0,
+      "realCLIExecuted": true,
+      "toolCalls": 5
+    },
+    {
+      "case": "negative",
+      "hostExitCode": 0,
+      "realCLIExecuted": false,
+      "toolCalls": 0
+    }
+  ],
+  "automatedTests": {
+    "passed": 20,
+    "failed": 0
+  },
+  "dependencyAuditVulnerabilities": 0,
+  "dependencyLicenseFilesVerified": 8,
+  "acceptedP3RuntimeFilesUnchanged": 10,
+  "pending": [
+    "Windows/Linux",
+    "Firefox/Safari",
+    "mobile",
+    "physical GPU performance",
+    "GitHub-hosted CI"
+  ],
+  "publicReleaseAuthorized": true,
+  "node22ReleasePreflight": {
+    "version": "22.23.3",
+    "freshDependencyInstall": true,
+    "testsPassed": 20,
+    "testsFailed": 0,
+    "createTwoEditsExportValidate": true,
+    "actualChromeBrowserSuite": "PASS"
+  }
+}

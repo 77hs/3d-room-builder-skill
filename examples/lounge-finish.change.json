@@ -1,0 +1,38 @@
+{
+  "expectedRevision": 2,
+  "operations": [
+    {
+      "op": "removeFurniture",
+      "id": "coffee-table"
+    },
+    {
+      "op": "addFurniture",
+      "value": {
+        "rotation": 0,
+        "material": "wood",
+        "id": "small-side-table",
+        "kind": "table",
+        "x": 0.65,
+        "z": 1,
+        "width": 0.8,
+        "depth": 0.5,
+        "height": 0.7
+      }
+    },
+    {
+      "op": "setMaterial",
+      "id": "wall",
+      "value": {
+        "color": "#dde5d9"
+      }
+    },
+    {
+      "op": "setLights",
+      "patch": {
+        "ambient": {
+          "intensity": 1.4
+        }
+      }
+    }
+  ]
+}
