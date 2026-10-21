@@ -66,11 +66,11 @@
   "dependencyLicenseFilesVerified": 8,
   "acceptedP3RuntimeFilesUnchanged": 10,
   "pending": [
-    "Windows/Linux",
+    "Windows runtime/browser",
+    "Linux browser interaction",
     "Firefox/Safari",
     "mobile",
-    "physical GPU performance",
-    "GitHub-hosted CI"
+    "physical GPU performance"
   ],
   "publicReleaseAuthorized": true,
   "node22ReleasePreflight": {
@@ -80,5 +80,31 @@
     "testsFailed": 0,
     "createTwoEditsExportValidate": true,
     "actualChromeBrowserSuite": "PASS"
+  },
+  "githubCI": {
+    "result": "PASS",
+    "platform": "ubuntu-latest",
+    "nodeMajorVersions": [
+      22,
+      24
+    ],
+    "testsPerJob": 20,
+    "packageCheck": true,
+    "initialRun": "https://github.com/77hs/3d-room-builder-skill/actions/runs/39601096007"
+  },
+  "releaseHostWorkflow": {
+    "result": "PASS",
+    "implicitCreation": "4.4 x 5.6m studio",
+    "continuousEdits": "4.9 x 5.6m, desk rotation/move, wall/ambient changes",
+    "revisions": [
+      1,
+      2,
+      3
+    ],
+    "exactUnrelatedDataPreservation": true,
+    "actualRejectedApply": true,
+    "actualChromeExportMovementBoundsReset": true,
+    "errors": [],
+    "externalRequests": []
   }
 }

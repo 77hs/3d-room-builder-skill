@@ -85,9 +85,23 @@ edits → export → validate all passed. Node 22 was installed only in a tempor
 suite also passed on Node 22: A/B/C/D, movement/collision/reset, six live edits and
 standalone rendering after removing its source workspace (zero page errors/external requests).
 
-Pending: Windows/Linux browser behavior, Firefox/Safari, mobile, physical GPU
-performance and GitHub-hosted CI. A read-only CI workflow is prepared for Node 22/24;
-consult [Actions](https://github.com/77hs/3d-room-builder-skill/actions) for actual runs. No deployment or benefit application is part of this release.
+GitHub-hosted Ubuntu CI passed both Node 22 and 24 jobs: fresh dependency installation,
+20 automated tests, packaging and offline release checks in each job.
+The [initial public run](https://github.com/77hs/3d-room-builder-skill/actions/runs/39601096007)
+is recorded evidence; consult [Actions](https://github.com/77hs/3d-room-builder-skill/actions)
+for subsequent commit/tag runs. Linux browser interaction was not tested by CI.
+
+A second fresh authenticated Codex release workflow also passed: implicit creation of a
+4.4 × 5.6m studio, explicit continuous resize to 4.9 × 5.6m and desk rotation/move,
+then wall/ambient changes (revisions 1 → 2 → 3). A real conflicting bookshelf/sofa
+apply returned exit 2 and preserved the committed scene. Independent comparison confirmed
+every unrelated property unchanged. The exported final scene actually rendered in Chrome,
+showed five furniture items, and passed keyboard movement, bounds and reset checks with
+zero page errors or external requests. This supplements rather than replaces the earlier
+implicit-edit/negative-routing and migration cases.
+
+Pending: Windows/Linux browser behavior, Firefox/Safari, mobile and physical GPU
+performance. No deployment or benefit application is part of this release.
 
 The product scope remains a single rectangle, orthogonal furniture, static open doorframes
 and fixed windows. Whole-footprint and sampled route checks can conservatively reject narrow
